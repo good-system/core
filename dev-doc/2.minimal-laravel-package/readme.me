@@ -1,0 +1,33 @@
+## 2. Make a Laravel Package
+
+Add the following section in `composer.json` to make the package work with Laravel.
+```
+"extra": {
+    "laravel": {
+        "providers": [
+            "GoodSystem\\GoodSystemServiceProvider"
+        ]
+    }
+}
+```
+
+And create `src/GoodSystemServiceProvider.php` following [Laravel documentation](https://laravel.com/docs/5.7/packages).
+
+Begin with just a route
+
+```
+public function boot()
+{
+    $this->loadRoutesFrom(__DIR__.'/routes.php');
+}
+```
+
+And of course, create `routes.php`
+
+```
+<?php
+// A test route.  This is to be removed later
+Route::get('/test', function () {
+    return "GOOD SYSTEM";
+});
+```

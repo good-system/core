@@ -1,0 +1,29 @@
+# 1. Create a Minimal Package
+
+A minimal PHP package, that can be installed using `composer`, can include just a single `composer.json` file.
+
+We already know we'll definitely need several packages, so add those in `require` and `require` dev sections.
+```
+{
+    "name": "good-system/core",
+    "require": {
+        "laravel/framework": "5.7.*",
+        "good-system/laravel-o365auth": "*",
+        "braintree/braintree_php": "^3.38.0"
+    },
+    "require-dev": {
+        "beyondcode/laravel-dump-server": "^1.0",
+        "filp/whoops": "^2.0",
+        "fzaninotto/faker": "^1.4",
+        "mockery/mockery": "^1.0",
+        "nunomaduro/collision": "^2.0",
+        "phpunit/phpunit": "^7.0"
+    },
+    "minimum-stability": "dev",
+    "autoload": {
+        "psr-4": {
+            "GoodSystem\\": "src"
+        }
+    }
+}
+```
