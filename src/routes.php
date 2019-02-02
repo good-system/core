@@ -1,6 +1,16 @@
 <?php
+Route::get('/admin/login', function () {
+    return redirect('/o365auth/init');
+});
 
-// A test route.  This is to be removed later
-Route::get('/test', function () {
-    return "GOOD SYSTEM";
+Route::middleware(['web', 'auth'])->group(function () {
+    Route::get('/admin', function () {
+        return "ADMIN";
+    })->name('admin');
+});
+
+Route::middleware(['verified'])->group(function () {
+    Route::get('/my', function () {
+        return "MY";
+    })->name('my');
 });

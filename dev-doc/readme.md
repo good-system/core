@@ -2,4 +2,4 @@
 
 1. [Minimal Package](1.minimal-package)
 2. [Minimal Laravel Package](2.minimal-laravel-package)
-3. []
+3. [Authentication](3.authentication)
