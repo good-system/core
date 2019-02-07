@@ -3,10 +3,12 @@ Route::get('/admin/login', function () {
     return redirect('/o365auth/init');
 });
 
-Route::middleware(['web', 'auth'])->group(function () {
-    Route::get('/admin', function () {
-        return "ADMIN";
-    })->name('admin');
+Route::middleware(['auth.ocef-hr'])->group(function () {
+    Route::middleware(['web', 'auth'])->group(function () {
+        Route::get('/admin', function () {
+            return "ADMIN";
+        })->name('admin');
+    });
 });
 
 Route::middleware(['verified'])->group(function () {
