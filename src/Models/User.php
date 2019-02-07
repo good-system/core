@@ -1,6 +1,6 @@
 <?php
 
-namespace GoodSystem;
+namespace GoodSystem\Models;
 
 use Illuminate\Notifications\Notifiable;
 use Illuminate\Contracts\Auth\MustVerifyEmail;

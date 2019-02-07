@@ -10,8 +10,8 @@
     ],
     "require": {
         "laravel/framework": "5.7.*",
-        "good-system/laravel-model-history": "^0.1.4",
-        "good-system/laravel-o365auth": "^0.1.7",
+        "good-system/laravel-model-history": "dev-master",
+        "good-system/laravel-o365auth": "dev-master",
         "braintree/braintree_php": "^3.38.0"
     },
     "autoload": {

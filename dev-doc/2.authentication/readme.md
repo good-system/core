@@ -8,6 +8,6 @@ This package depends on [`good-system/laravel-o365auth`](https://github.com/good
 
 In order for this to work, Laravel built-in authentication needs to be set up at application level.  For example, see [`good-system/organization`](https://github.com/good-system/organization/tree/0.0.3).   
 
-The only other requirement for this to work is to make a model class `\User` available.  For that purpose, model `GoodSystem\User` is created, and its alias `\User` is created at booting time.
+The only other requirement for this to work is to make a model class `\O365User` available.  For that purpose, model `GoodSystem\Models\O365User` is created, and its alias `\O365User` is created at booting time.
 
 To better communicate authentication errors with users, create a set of generic views by error code.  Usually, if authentication does't pass at Microsoft, the user should not expect to be redirected back to the application.  Therefore, it should be very rare that those OAuth errors are ever seen by a user.
